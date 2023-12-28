@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,9 +9,12 @@
   <body>
     <div id="app">
       <h1>Todo app</h1>
-      <br/>
+      <br />
       <div>
-        <input type="text" placeholder="search">
+        <label for="input">
+          <input id="input" type="text" placeholder="search" />
+          <button id="btnSave">save</button>
+        </label>
         <ul class="list">
           <li class="item">Item 1</li>
           <li class="item">Item 2</li>
