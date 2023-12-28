@@ -17,7 +17,6 @@ function Todo() {
     todoList.appendChild(li)
     input.value = ''
     gettingBtn()
-
   }
 }
 
@@ -26,7 +25,7 @@ function gettingBtn() {
   item.forEach((li) => {
     li.children[0].addEventListener('click', (btn) => {
       btn.currentTarget.parentElement.remove();
-      data = data.filter((a) => a !== btn.currentTarget.parentElement.innerHTML.slice(0, -27))
+      data = data.filter((a) => a.trim() !== btn.currentTarget.parentElement.innerHTML.slice(0, -27).trim());
     });
   });
 }
