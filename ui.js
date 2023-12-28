@@ -1,32 +1,39 @@
 const [todoList] = document.getElementsByClassName('list');
 const input = document.getElementById('input')
 const btnSave = document.getElementById('btnSave')
-const item = document.querySelectorAll('.item')
-const data = []
+
+let data = []
 btnSave.addEventListener('click', () => data.push(input.value))
 btnSave.addEventListener('click', Todo)
 
 function Todo() {
   const text = input.value
   if (text.trim() !== '') {
-    console.log(data)
     const html = ` ${text}
- <button   onclick="deleteLi(this)"> delete</button> `
+ <button> delete</button> `
     const li = document.createElement('li');
     li.innerHTML = html;
     li.classList = "item"
     todoList.appendChild(li)
     input.value = ''
-    console.log(li)
+    gettingBtn()
+
   }
 }
 
 function gettingBtn() {
-  item.map((li) => { li.childeren[0].addEventListener('click', (btn) => btn.parentElement.remove()) })
+  const item = document.querySelectorAll('.item')
+  item.forEach((li) => {
+    li.children[0].addEventListener('click', (btn) => {
+      btn.currentTarget.parentElement.remove();
+      data = data.filter((a) => a !== btn.currentTarget.parentElement.innerHTML.slice(0, -27))
+    });
+  });
+
 }
 function deleteLi(btn) {
   btn.parentElement.remove()
-  data = data.filter((a) => a !== btn.value)
+
 }
 
 
