@@ -29,11 +29,6 @@ function gettingBtn() {
       data = data.filter((a) => a !== btn.currentTarget.parentElement.innerHTML.slice(0, -27))
     });
   });
-
-}
-function deleteLi(btn) {
-  btn.parentElement.remove()
-
 }
 
 
