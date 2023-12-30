@@ -1,0 +1,102 @@
+body {
+  background: hsla(154, 100%, 76%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(154, 100%, 76%, 1) 0%,
+    hsla(234, 100%, 83%, 1) 50%,
+    hsla(288, 100%, 81%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(154, 100%, 76%, 1) 0%,
+    hsla(234, 100%, 83%, 1) 50%,
+    hsla(288, 100%, 81%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(154, 100%, 76%, 1) 0%,
+    hsla(234, 100%, 83%, 1) 50%,
+    hsla(288, 100%, 81%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#84ffc9", endColorstr="#aab2ff", GradientType=1 );
+}
+#app {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.list {
+  display: flex;
+  text-wrap: wrap;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.item {
+  background: dodgerblue;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: large;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+.item button {
+  border-radius: 1rem;
+  height: 2rem;
+  width: 4rem;
+  border: none;
+  color: dodgerblue;
+  background-color: white;
+  transition: all;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+.item button:hover {
+  background-color: rgb(0, 97, 193);
+  color: white;
+}
+h1 {
+  color: tomato;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: tomato;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: white;
+  outline: none;
+}
+
+button {
+  background-color: rgb(230, 36, 1);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: tomato;
+}
